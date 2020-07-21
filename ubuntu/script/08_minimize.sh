@@ -21,10 +21,13 @@ echo "==> Remove gnome games and utilities"
 apt-get -y purge aisleriot gnome-mines gnome-mahjongg gnome-sudoku rhythmbox-data transmission-common simple-scan cheese deja-dup gnome-todo-common shotwell-common usb-creator-common gnome-calendar remmina-common
 echo "==> Removing other oddities"
 apt-get -y purge popularity-contest installation-report landscape-common thunderbird ubuntu-docs gnome-initial-setup
-
 # Remove auto notification UI nag dialog
 echo "==> Removing auto notification UI software updater nag dialog"
 apt-get -y remove update-notifier
+echo "==> Removing the release upgrader"
+apt-get -y purge ubuntu-release-upgrader-core
+rm -rf /var/lib/ubuntu-release-upgrader
+rm -rf /var/lib/update-manager
 
 # Clean up the apt cache
 apt-get -y autoremove --purge

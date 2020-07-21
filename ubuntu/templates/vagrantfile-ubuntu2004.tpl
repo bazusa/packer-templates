@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.define "ubuntu1804-desktop"
-  config.vm.box = "parasoft/ubuntu1804-desktop"
+  config.vm.define "ubuntu2004-desktop"
+  config.vm.box = "parasoft/ubuntu2004-desktop"
 
   config.vm.provider :virtualbox do |vb, override|
     vb.gui = true

@@ -6,15 +6,12 @@ if [[ ! "$DESKTOP" =~ ^(true|yes|on|1|TRUE|YES|ON])$ ]]; then
   exit
 fi
 
-# In Ubuntu 12.04, the contents of /var/lib/apt/lists are corrupt
+# get version of ubuntu
 ubuntu_version=$(lsb_release -r | awk '{ print $2 }')
 
 echo "==> Installing ubuntu-desktop"
-if [ "$ubuntu_version" == '18.04' ]; then
-  apt-get install -y ubuntu-desktop
-else
-  apt-get install -y ubuntu-desktop-minimal
-fi
+apt-get install -y ubuntu-desktop
+
 
 if [ -d /etc/xdg/autostart/ ]; then
   echo "==> Disabling screen blanking"
