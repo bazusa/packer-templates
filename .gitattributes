@@ -1,0 +1,9 @@
+# Ensure shell scripts uses LF.
+Dockerfile  eol=lf
+*.sh        eol=lf
+
+# Ensure windows scripts uses CRLF
+*.bat	eol=crlf
+*.ps1	eol=crlf
+*.psm1	eol=crlf
+*.reg	eol=crlf
