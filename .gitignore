@@ -6,3 +6,5 @@ box/
 
 output**/
 packer_cache/
+
+packerlog*
